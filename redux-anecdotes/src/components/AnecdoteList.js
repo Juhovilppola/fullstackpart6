@@ -21,9 +21,6 @@ const AnecdoteList = () => {
     
 
     anecdotes.sort((a,b) => b.votes - a.votes)
-    
-    //const filtered = anecdotes.filter(anecdote => anecdote.content.includes(filter))
-    //console.log(filter)
     const vote = (anecdote) => {
         dispatch(votean(anecdote.id))
         dispatch(setNotification(`you voted '${anecdote.content}'`, 1))
